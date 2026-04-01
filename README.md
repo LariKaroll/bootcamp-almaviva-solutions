@@ -21,7 +21,12 @@ Almaviva Solutions - Back-end com Java &amp; QA - DIO
     </td>
     <td width="50%" valign="top">
       <h3>módulo 03</h3>
-      <p>Concluído com sucesso!</p>
+      <ul>
+        <li>Classes e Encapsulamento</li>
+        <li>Tipos primitivos</li>
+        <li>Operadores Aritméticos</li>
+        
+  </ul>
     </td>
   </tr>
 </table>
