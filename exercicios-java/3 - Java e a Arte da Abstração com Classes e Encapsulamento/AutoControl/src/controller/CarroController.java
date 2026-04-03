@@ -1,6 +1,7 @@
 package controller;
 
 public class CarroController {
+    private String name;
     private boolean onOffCarro;
     private int velocidade;
     private int marcha;
@@ -8,7 +9,8 @@ public class CarroController {
     public CarroController(){
 
     }
-    public CarroController(boolean onOffCarro, int velocidade, int marcha) {
+    public CarroController(String name, boolean onOffCarro, int velocidade, int marcha) {
+        this.name = name;
         this.onOffCarro = onOffCarro;
         this.velocidade = velocidade;
         this.marcha = marcha;
@@ -23,11 +25,19 @@ public class CarroController {
     }
 
     public int getVelocidade() {
-        return velocidade;
+        return this.velocidade;
     }
 
     public void setVelocidade(int velocidade) {
-        this.velocidade = velocidade;
+        if(this.velocidade <= 120){
+            if (velocidade == -1){
+                this.velocidade -= 1;
+            }else{
+                this.velocidade += 1;
+            }
+        }else {
+            this.velocidade = 120;
+        }
     }
 
     public int getMarcha() {
@@ -35,6 +45,10 @@ public class CarroController {
     }
 
     public void setMarcha(int marcha) {
-        this.marcha = marcha;
+        if (velocidade == -1){
+            this.marcha -= 1;
+        }else{
+            this.marcha += 1;
+        }
     }
 }
