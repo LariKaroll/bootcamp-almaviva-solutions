@@ -1,18 +1,34 @@
 package control;
 
 public class PetControl {
-    private final String name;
+    private String name;
     private int water;
     private int shampoo;
-    private boolean empityMachine;
+    private boolean empityMachine = true;
+    private boolean clean = true;
 
-    public PetControl(String name, int water, int shampoo, boolean empityMachine) {
+    public PetControl(String name, int water, int shampoo, boolean empityMachine, boolean clean) {
         this.name = name;
         this.water = water;
         this.shampoo = shampoo;
         this.empityMachine = empityMachine;
+        this.clean = clean;
     }
 
+    public PetControl() {
+    }
+
+    public boolean isClean() {
+        return clean;
+    }
+
+    public void setClean(boolean clean) {
+        this.clean = clean;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
     public String getName() {
         return name;
     }
