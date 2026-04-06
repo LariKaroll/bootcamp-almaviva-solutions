@@ -16,6 +16,5 @@ public class Main {
             start.escolhaStart(option);
             index = option;
         }while (index < 8);
-
     }
 }

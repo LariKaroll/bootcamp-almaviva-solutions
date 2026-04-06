@@ -6,6 +6,7 @@ import java.util.Scanner;
 
 public class EntradaModel extends CarroController {
     Scanner sc = new Scanner(System.in);
+    CarroModel modelCarro = new CarroModel();
     public EntradaModel() {
     }
 
@@ -25,7 +26,7 @@ public class EntradaModel extends CarroController {
         System.out.println("8 - FIM");
         System.out.println("-------------------------------------");
     }
-    
+
     public int escolhaStart(int escolha){
         if(escolha == 1){
             System.out.println("Ligando o carro!");
@@ -38,7 +39,7 @@ public class EntradaModel extends CarroController {
             setMarcha(0);
             System.out.println("Carro desligado!");
         } else if (escolha == 3) {
-            if(isOnOffCarro()){
+            if(isOnOffCarro(true)){
                 if(getMarcha()!=0){
                     setVelocidade(1);
                     System.out.println("Aumentando velocidade!\n "+ getVelocidade() +"km/s");
@@ -50,7 +51,7 @@ public class EntradaModel extends CarroController {
             }
         } else if (escolha == 4) {
             if(getVelocidade() > 0){
-                if(isOnOffCarro()){
+                if(isOnOffCarro(true)){
                     setVelocidade(-1);
                     System.out.println("Diminuindo velocidade!\n "+ getVelocidade() +"km/s");
                 }else{
@@ -61,7 +62,7 @@ public class EntradaModel extends CarroController {
                 System.out.println(getVelocidade()+"km/s");
             }
         } else if (escolha == 5) {
-            if(isOnOffCarro()){
+            if(isOnOffCarro(true)){
                 if(getVelocidade() >= 1 && getVelocidade() <=40){
                     System.out.println("1 - esquerda\n2 - direita");
                     int direcao = sc.nextInt();
@@ -77,14 +78,14 @@ public class EntradaModel extends CarroController {
                 System.out.println("Carro desligado!");
             }
         } else if (escolha == 6) {
-            if(isOnOffCarro()){
+            if(isOnOffCarro(true)){
                 System.out.println("Velocidade atual: \n" +getVelocidade()+ "km/s");
             }else{
                 System.out.println("Carro desligado!");
             }
         } else if (escolha == 7) {
-            if(isOnOffCarro()){
-                setMarcha(1);
+            if(isOnOffCarro(true)){
+                modelCarro.condicaoMarcha(1);
                 System.out.println("Trocando de machar!\n Marcha atual: "+ getMarcha());
             }else{
                 System.out.println("Carro desligado!");

@@ -16,7 +16,7 @@ public class CarroController {
         this.marcha = marcha;
     }
 
-    public boolean isOnOffCarro() {
+    public boolean isOnOffCarro(boolean b) {
         return onOffCarro;
     }
 
