@@ -1,13 +1,11 @@
 package control;
 
-import model.Pet;
-
 import java.util.Scanner;
 
-public class StartPetShopModel {
-    PetMachineModel machine = new PetMachineModel();
+public class StartPetShopControl {
+    PetMachineControl machine = new PetMachineControl();
     Scanner sc = new Scanner(System.in);
-    public StartPetShopModel(){
+    public StartPetShopControl(){
     }
 
     public void println(String mensage){

@@ -1,12 +1,10 @@
-import model.Pet;
-import control.PetMachineModel;
-import control.StartPetShopModel;
+import control.StartPetShopControl;
 
 import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        StartPetShopModel start = new StartPetShopModel();
+        StartPetShopControl start = new StartPetShopControl();
         Scanner scanner = new Scanner(System.in);
 
         int option = -1;

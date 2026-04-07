@@ -5,13 +5,13 @@ import model.Pet;
 
 import java.util.Scanner;
 
-public class PetMachineModel extends Pet {
+public class PetMachineControl extends Pet {
     Scanner sc = new Scanner(System.in);
     Machine machine = new Machine();
 
-    public PetMachineModel(){
+    public PetMachineControl(){
     }
-    public PetMachineModel(String name, boolean clear) {
+    public PetMachineControl(String name, boolean clear) {
         super(name, clear);
     }
 
