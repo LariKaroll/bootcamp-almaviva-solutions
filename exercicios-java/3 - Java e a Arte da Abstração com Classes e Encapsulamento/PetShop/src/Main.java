@@ -1,22 +1,21 @@
-import control.PetControl;
-import model.PetMachineModel;
-import model.StartPetShopModel;
+import model.Pet;
+import control.PetMachineModel;
+import control.StartPetShopModel;
 
 import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        StartPetShopModel petShopModel = new StartPetShopModel();
-        PetMachineModel machine = new PetMachineModel();
-        PetControl pet = new PetControl();
+        StartPetShopModel start = new StartPetShopModel();
         Scanner scanner = new Scanner(System.in);
+
         int option = -1;
-        machine.namePet();
-        pet.setName(scanner.next());
+        start.namePet();
+
         do{
-            petShopModel.start();
+            start.start();
             option = scanner.nextInt();
-            petShopModel.optionPetMachine(option);
+            start.optionPetMachine(option);
         }while (option != 0);
     }
 }
