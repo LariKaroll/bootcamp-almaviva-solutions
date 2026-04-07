@@ -1,20 +1,20 @@
-import controller.CarroController;
-import model.EntradaModel;
+import model.Carro;
+import controller.EntradaControl;
 
 import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        EntradaModel start = new EntradaModel();
-        CarroController carro1 = new CarroController("Sandero",false, 0,0);
+        EntradaControl start = new EntradaControl();
 
-        int index = 0;
-        start.entradaPrograma();
+        int index = -1;
+
         do{
+            start.entradaPrograma();
             int option = sc.nextInt();
             start.escolhaStart(option);
             index = option;
-        }while (index < 8);
+        }while (index != 0);
     }
 }

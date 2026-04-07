@@ -38,6 +38,8 @@ public class StartPetShopControl {
             case 7 -> machine.setPetInMachine();
             case 8 -> machine.removePet();
             case 9 -> machine.cleanMachine();
+            case 0 -> println("Finalizando...");
+            default -> println("Opcao invalida!");
         }
     }
 
