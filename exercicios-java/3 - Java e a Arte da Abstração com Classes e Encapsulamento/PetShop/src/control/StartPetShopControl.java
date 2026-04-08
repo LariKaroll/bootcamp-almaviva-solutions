@@ -1,9 +1,12 @@
 package control;
 
+import model.Pet;
+
 import java.util.Scanner;
 
 public class StartPetShopControl {
-    PetMachineControl machine = new PetMachineControl();
+    Pet pet = new Pet();
+    PetMachineControl machine = new PetMachineControl(pet);
     Scanner sc = new Scanner(System.in);
     public StartPetShopControl(){
     }
@@ -45,6 +48,6 @@ public class StartPetShopControl {
 
     public void namePet(){
         System.out.println("Infome o nome do Pet: ");
-        machine.setName(sc.next());
+        pet.setName(sc.next());
     }
 }

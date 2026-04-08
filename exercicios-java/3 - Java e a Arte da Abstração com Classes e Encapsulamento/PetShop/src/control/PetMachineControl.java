@@ -10,7 +10,8 @@ public class PetMachineControl {
     Scanner sc = new Scanner(System.in);
     Machine machine = new Machine();
 
-    public PetMachineControl(){
+    public PetMachineControl(Pet pet){
+        this.pet = pet;
     }
 
 
