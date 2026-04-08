@@ -5,30 +5,28 @@ import model.Pet;
 
 import java.util.Scanner;
 
-public class PetMachineControl extends Pet {
+public class PetMachineControl {
+    private Pet pet;
     Scanner sc = new Scanner(System.in);
     Machine machine = new Machine();
 
     public PetMachineControl(){
     }
-    public PetMachineControl(String name, boolean clear) {
-        super(name, clear);
-    }
 
 
     public void bathingPet(){
-        if(isClean() && !machine.isEmpityMachine() && machine.getWater() >= 10 && machine.getShampoo() >= 2){
+        if(pet.isClean() && !machine.isEmpityMachine() && machine.getWater() >= 10 && machine.getShampoo() >= 2){
             machine.setWater(machine.getWater() - 2);
             machine.setShampoo(machine.getShampoo() - 10);
-            setClean(false);
-            System.out.println( getName() + " tomou banho!");
+            pet.setClean(false);
+            System.out.println( pet.getName() + " tomou banho!");
         }else {
             System.out.println("Verifique a Maquina!");
         }
     }
     public void verifyEmpity(){
         if(!machine.isEmpityMachine()){
-            System.out.println("Tem pet na maquina!\nName: "+getName());
+            System.out.println("Tem pet na maquina!\nName: "+pet.getName());
         }else {
             System.out.println("Nao tem pet na Maquina!");
         }
@@ -62,9 +60,9 @@ public class PetMachineControl extends Pet {
     }
 
     public void setPetInMachine(){
-        if(isClean() && machine.isEmpityMachine()){
+        if(pet.isClean() && machine.isEmpityMachine()){
             machine.setEmpityMachine(false);
-            System.out.println("O pet " + getName() + " foi colocado na maquina!");
+            System.out.println("O pet " + pet.getName() + " foi colocado na maquina!");
         }else if(!machine.isEmpityMachine()){
             System.out.println("Maquina cheia!");
         }
@@ -72,14 +70,14 @@ public class PetMachineControl extends Pet {
 
     public void removePet(){
         machine.setEmpityMachine(true);
-        System.out.println("O pet " + getName() + " foi removido!");
+        System.out.println("O pet " + pet.getName() + " foi removido!");
     }
 
     public void cleanMachine(){
         if(machine.getWater() >= 3 && machine.getShampoo() >= 1){
             machine.setShampoo(machine.getShampoo() - 1);
             machine.setWater(machine.getWater() - 3);
-            setClean(true);
+            pet.setClean(true);
             System.out.println("Maquina limpa com Sucesso!");
         }else {
             System.out.println("Verifique a Agua!\nVerifique o Shampoo!");

@@ -5,7 +5,6 @@ public class Machine {
     private int shampoo;
     private boolean empityMachine = true;
 
-    private Pet pet;
 
     public Machine(){
 
