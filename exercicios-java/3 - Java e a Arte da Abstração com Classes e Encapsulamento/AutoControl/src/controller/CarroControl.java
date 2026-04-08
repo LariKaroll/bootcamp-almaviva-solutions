@@ -8,8 +8,8 @@ public class CarroControl {
     private Carro carro;
     Scanner sc = new Scanner(System.in);
 
-    public CarroControl(){
-        this.carro = new Carro();
+    public CarroControl(Carro carro){
+        this.carro = carro;
     }
 
 

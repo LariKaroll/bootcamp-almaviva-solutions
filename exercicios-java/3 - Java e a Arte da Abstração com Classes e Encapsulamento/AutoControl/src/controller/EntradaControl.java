@@ -5,7 +5,8 @@ import model.Carro;
 import java.util.Scanner;
 
 public class EntradaControl {
-    CarroControl controle = new CarroControl();
+    Carro carro = new Carro();
+    CarroControl controle = new CarroControl(carro);
     public EntradaControl() {
     }
 
