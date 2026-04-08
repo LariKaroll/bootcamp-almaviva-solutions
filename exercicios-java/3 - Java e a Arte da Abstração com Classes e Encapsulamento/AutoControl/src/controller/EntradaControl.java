@@ -5,7 +5,6 @@ import model.Carro;
 import java.util.Scanner;
 
 public class EntradaControl {
-    Scanner sc = new Scanner(System.in);
     CarroControl controle = new CarroControl();
     public EntradaControl() {
     }
