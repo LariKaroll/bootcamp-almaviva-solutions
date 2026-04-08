@@ -1,7 +1,10 @@
 package control;
 
+import model.Conta;
+
 public class Start{
-    Banco banco = new Banco();
+    Conta conta = new Conta();
+    Banco banco = new Banco(conta);
 
     public Start(){
 
