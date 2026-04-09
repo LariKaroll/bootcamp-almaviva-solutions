@@ -1,5 +1,6 @@
 package control;
 
+import model.Bomboniere;
 import model.Ingresso;
 import model.IngressoFamilia;
 import model.MeiaEntrada;
@@ -11,6 +12,7 @@ public class OptionMenu {
     Scanner sc = new Scanner(System.in);
     IngressoFamilia ingressoFamilia = new IngressoFamilia();
     MeiaEntrada meiaEntrada = new MeiaEntrada();
+    Bomboniere bomboniere = new Bomboniere();
     private Ingresso ingresso;
 
     public OptionMenu(){
@@ -21,7 +23,7 @@ public class OptionMenu {
         this.ingresso = ingresso;
     }
 
-    public void startOption(){
+    public void startOption(int index){
         int optionStart = sc.nextInt();
         switch (optionStart){
             case 1 -> {
@@ -138,12 +140,37 @@ public class OptionMenu {
                 int optionBomboniere = sc.nextInt();
                 switch (optionBomboniere){
                     case 1 ->{
-
+                        System.out.println("Pipoca Doce");
+                        bomboniere.setValor(bomboniere.getValor()+30);
+                        System.out.println("Valor: R$"+bomboniere.getValor());
                     }
                     case 2-> {
-
+                        System.out.println("Pipoca Salgada");
+                        bomboniere.setValor(bomboniere.getValor()+25);
+                        System.out.println("Valor: R$"+bomboniere.getValor());
+                    }
+                    case 3-> {
+                        System.out.println("Refrigerante");
+                        bomboniere.setValor(bomboniere.getValor()+11);
+                        System.out.println("Valor: R$"+bomboniere.getValor());
+                    }
+                    case 4-> {
+                        System.out.println("Suco");
+                        bomboniere.setValor(bomboniere.getValor()+14);
+                        System.out.println("Valor: R$"+bomboniere.getValor());
+                    }
+                    case 5-> {
+                        System.out.println("Doces");
+                        bomboniere.setValor(bomboniere.getValor()+5);
+                        System.out.println("Valor: R$"+bomboniere.getValor());
+                    }
+                    case 7-> {
+                        break;
                     }
                 }
+            }
+            case 0 -> {
+                index = 0;
             }
             default -> System.out.println("Opcao invalida!");
         }
