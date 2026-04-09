@@ -146,12 +146,14 @@ public class OptionMenu {
                         }
                     }
                     case 7 -> {
+
                         break;
                     }
                     default -> System.out.println("Opcao invalida!");
                 }
             }
             case 0 -> {
+                System.out.println("finalizando...");
                 index = 0;
             }
             default -> System.out.println("Opcao invalida!");
