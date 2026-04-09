@@ -1,7 +1,7 @@
 package model;
 
 public sealed abstract class Ingresso permits IngressoFamilia, MeiaEntrada {
-    private double valor = 40;
+    protected double valor = 40;
     private String nomeDoFilme;
     private int tipoIngresso;
 
