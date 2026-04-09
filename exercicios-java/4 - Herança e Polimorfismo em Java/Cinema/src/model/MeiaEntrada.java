@@ -1,6 +1,7 @@
 package model;
 
 public non-sealed class MeiaEntrada extends Ingresso{
+
     public MeiaEntrada() {
     }
 
@@ -9,6 +10,7 @@ public non-sealed class MeiaEntrada extends Ingresso{
     }
     @Override
     public double getValor(){
-        return getValor()/2;
+        return (valor/2);
     }
+
 }

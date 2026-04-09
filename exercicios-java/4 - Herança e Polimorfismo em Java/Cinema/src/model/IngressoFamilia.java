@@ -15,7 +15,7 @@ public non-sealed class IngressoFamilia extends Ingresso{
     @Override
     public double getValor() {
         if(getQuatidadePessoas() > 3){
-            double valorTotal = (getValor()*getQuatidadePessoas())*0.05;
+            double valorTotal = (valor*getQuatidadePessoas())*0.05;
             return valorTotal;
         }
         return getQuatidadePessoas()*getQuatidadePessoas();

@@ -13,6 +13,6 @@ public class Main {
             menu.startPrograma();
             optionMenu.startOption();
 
-        }while (index != 0);
+        }while (index == 0);
     }
 }

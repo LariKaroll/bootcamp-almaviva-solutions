@@ -17,6 +17,7 @@ public class Main {
                 maneger.setSalary(5000.3);
                 maneger.setComission(2800);
 
+                System.out.println(maneger.getCode());
                 System.out.println(maneger.getName());
                 System.out.println(maneger.getAge());
                 System.out.println(maneger.getLogin());
