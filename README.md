@@ -23,7 +23,7 @@ Almaviva Solutions - Back-end com Java &amp; QA - DIO
       <h3>módulo 03</h3>
       <ul>
         <li>Classes e Encapsulamento</li>
-        <li></li>
+        <li>Herança e Polimorfismo</li>
         <li></li>
     </ul>
     </td>
