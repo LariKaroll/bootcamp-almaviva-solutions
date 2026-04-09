@@ -4,8 +4,8 @@ public non-sealed class IngressoFamilia extends Ingresso{
 
     private int quatidadePessoas;
 
-    public IngressoFamilia(double valor, String nomeDoFilme, int tipoIngresso, int quatidadePessoas) {
-        super(valor, nomeDoFilme, tipoIngresso);
+    public IngressoFamilia(double valor, String nomeDoFilme, int tipoIngresso, int quatidadePessoas, String audioFilme) {
+        super(valor, nomeDoFilme, tipoIngresso, audioFilme);
         this.quatidadePessoas = quatidadePessoas;
     }
 
