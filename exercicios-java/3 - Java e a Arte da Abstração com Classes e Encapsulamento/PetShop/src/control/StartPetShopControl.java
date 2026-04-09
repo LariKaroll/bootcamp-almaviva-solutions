@@ -1,0 +1,53 @@
+package control;
+
+import model.Pet;
+
+import java.util.Scanner;
+
+public class StartPetShopControl {
+    Pet pet = new Pet();
+    PetMachineControl machine = new PetMachineControl(pet);
+    Scanner sc = new Scanner(System.in);
+    public StartPetShopControl(){
+    }
+
+    public void println(String mensage){
+        System.out.println(mensage);
+        return;
+    }
+    public void start(){
+        println("---------------------------------");
+        println("1 - Dar banho no pet");
+        println("2 - Abastecer com água");
+        println("3 - Abastecer com shampoo");
+        println("4 - Verificar nivel de água");
+        println("5 - Verificar nivel de shampoo");
+        println("6 - Verificar se tem pet no banho");
+        println("7 - Colocar pet na máquina");
+        println("8 - Retirar pet da máquina");
+        println("9 - Limpar maquina");
+        println("0 - Finalizar");
+        println("---------------------------------");
+    }
+
+    public void optionPetMachine(int option){
+        switch (option){
+            case 1 -> machine.bathingPet();
+            case 2 -> machine.addWater();
+            case 3 -> machine.addShampo();
+            case 4 -> machine.verifyWater();
+            case 5 -> machine.verifyShampoo();
+            case 6 -> machine.verifyEmpity();
+            case 7 -> machine.setPetInMachine();
+            case 8 -> machine.removePet();
+            case 9 -> machine.cleanMachine();
+            case 0 -> println("Finalizando...");
+            default -> println("Opcao invalida!");
+        }
+    }
+
+    public void namePet(){
+        System.out.println("Infome o nome do Pet: ");
+        pet.setName(sc.next());
+    }
+}
