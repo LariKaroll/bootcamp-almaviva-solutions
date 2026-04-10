@@ -4,6 +4,10 @@ public non-sealed class Vendedor extends Employees{
 
     private int quantidadeDeVendas;
 
+    public Vendedor(){
+
+    }
+
     public Vendedor(String name, String email, String password, boolean administrador, int quantidadeDeVendas) {
         super(name, email, password, administrador);
         this.quantidadeDeVendas = quantidadeDeVendas;

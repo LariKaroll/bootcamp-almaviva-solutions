@@ -13,6 +13,9 @@ public sealed abstract class Employees permits Gerente,Vendedor,Atendente {
         this.administrador = administrador;
     }
 
+    protected Employees() {
+    }
+
     public String getName() {
         return name;
     }

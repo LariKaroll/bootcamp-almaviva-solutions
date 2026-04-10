@@ -4,6 +4,10 @@ public non-sealed class Atendente extends Employees{
 
     private double valueInBox;
 
+    public Atendente(){
+
+    }
+
     public Atendente(String name, String email, String password, boolean administrador, double valueInBox) {
         super(name, email, password, administrador);
         this.valueInBox = valueInBox;
