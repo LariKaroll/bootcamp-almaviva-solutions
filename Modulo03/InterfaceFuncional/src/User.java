@@ -1,2 +1,2 @@
-package PACKAGE_NAME;public record User() {
+public record User(String name, int age) {
 }
