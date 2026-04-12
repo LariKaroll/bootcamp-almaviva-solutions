@@ -24,7 +24,8 @@ Almaviva Solutions - Back-end com Java &amp; QA - DIO
       <ul>
         <li>Classes e Encapsulamento</li>
         <li>Herança e Polimorfismo</li>
-        <li></li>
+        <li>Interfaces e Records</li>
+        <li>Lambda</li>
     </ul>
     </td>
   </tr>
