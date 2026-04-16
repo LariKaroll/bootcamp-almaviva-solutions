@@ -1,4 +1,4 @@
-package ExercicioOperacaoBasica;
+package ExercicioOperacaoBasica.ListaDeTarefas;
 
 public class Tarefa {
 

@@ -1,4 +1,4 @@
-package ExercicioOperacaoBasica;
+package ExercicioOperacaoBasica.ListaDeTarefas;
 
 import java.util.ArrayList;
 import java.util.List;
