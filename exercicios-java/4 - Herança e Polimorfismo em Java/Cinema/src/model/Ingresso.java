@@ -4,11 +4,13 @@ public sealed abstract class Ingresso permits IngressoFamilia, MeiaEntrada {
     protected double valor = 40;
     private String nomeDoFilme;
     private int tipoIngresso;
+    private String audioFilme;
 
-    public Ingresso(double valor, String nomeDoFilme, int tipoIngresso) {
+    public Ingresso(double valor, String nomeDoFilme, int tipoIngresso, String audioFilme) {
         this.valor = valor;
         this.nomeDoFilme = nomeDoFilme;
         this.tipoIngresso = tipoIngresso;
+        this.audioFilme = audioFilme;
     }
 
     public Ingresso() {
@@ -34,5 +36,13 @@ public sealed abstract class Ingresso permits IngressoFamilia, MeiaEntrada {
 
     public void setTipoIngresso(int tipoIngresso) {
         this.tipoIngresso = tipoIngresso;
+    }
+
+    public String getAudioFilme() {
+        return audioFilme;
+    }
+
+    public void setAudioFilme(String audioFilme) {
+        this.audioFilme = audioFilme;
     }
 }

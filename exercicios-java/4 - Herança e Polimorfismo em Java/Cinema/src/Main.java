@@ -11,7 +11,7 @@ public class Main {
 
         do {
             menu.startPrograma();
-            optionMenu.startOption();
+            optionMenu.startOption(index);
 
         }while (index == 0);
     }
